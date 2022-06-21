@@ -2,15 +2,21 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomButton from "../../components/CustomInput/CustomButton/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 const ForgotPasswordScreen = () => {
   const [username, setUsername] = useState("");
+  const navigation = useNavigation();
 
   const onSendPressed = () => {
     console.warn("onsendpressed");
+    //code and confirm password screen
+    navigation.navigate("NewPasswordScreen");
   };
   const onBackToSignIn = () => {
     console.warn("backtosignin");
+    //back to sign in page
+    navigation.navigate("SignIn");
   };
   return (
     <View style={styles.root}>

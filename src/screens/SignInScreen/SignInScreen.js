@@ -3,20 +3,28 @@ import React, { useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomButton from "../../components/CustomInput/CustomButton/CustomButton";
 import SocialSignInButton from "../../components/SocialSignInButton/SocialSignInButton";
+import { useNavigation } from "@react-navigation/native";
 
 const SignInScreen = () => {
+  const navigation = useNavigation();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const onSignInPressed = () => {
     console.warn("UserSign pressed");
+    //here we need to login and validate the user
+    navigation.navigate("HomeScreen");
   };
   const onForgetPasswordPressed = () => {
     console.warn("Forget password pressed");
+    //Redirect to forgot password page
+    navigation.navigate("ForgotPassword");
   };
 
   const onSignUpPressed = () => {
-    console.warn("Sign in with Apple");
+    console.warn("Create a new Account");
+    //Redirect to ac open page
+    navigation.navigate("SignUpScreen");
   };
   return (
     <ScrollView>

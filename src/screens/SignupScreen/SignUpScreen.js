@@ -3,18 +3,24 @@ import React, { useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomButton from "../../components/CustomInput/CustomButton/CustomButton";
 import SocialSignInButton from "../../components/SocialSignInButton/SocialSignInButton";
+import { useNavigation } from "@react-navigation/native";
 
 const SignUpScreen = () => {
   const [name, SetName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, SetConfirmPassword] = useState("");
+  const navigation = useNavigation();
 
   const haveAnAccount = () => {
     console.warn("Already a account");
+    //alreay a account
+    navigation.navigate("SignIn");
   };
   const onRegisterUser = () => {
     console.warn("Create new account");
+    //Validate and add email confirmation
+    navigation.navigate("ConfrimEmail");
   };
   const onTermOfUsePresses = () => {
     console.warn("onTermOfUsePresses");
