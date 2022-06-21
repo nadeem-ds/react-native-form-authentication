@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import ConfirmEmailScreen from "./src/screens/ConfirmEmailScreen/ConfirmEmailScreen";
 import SignInScreen from "./src/screens/SignInScreen/SignInScreen";
 import SignUpScreen from "./src/screens/SignupScreen/SignUpScreen";
 
@@ -7,7 +8,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <SignInScreen /> */}
-      <SignUpScreen />
+      {/* <SignUpScreen /> */}
+      <ConfirmEmailScreen />
       <StatusBar style="auto" />
     </View>
   );
