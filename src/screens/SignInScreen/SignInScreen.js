@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React, { useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomButton from "../../components/CustomInput/CustomButton/CustomButton";
+import SocialSignInButton from "../../components/SocialSignInButton/SocialSignInButton";
 
 const SignInScreen = () => {
   const [username, setUsername] = useState("");
@@ -13,15 +14,7 @@ const SignInScreen = () => {
   const onForgetPasswordPressed = () => {
     console.warn("Forget password pressed");
   };
-  const onSignInwithGoogle = () => {
-    console.warn("Sign in with google");
-  };
-  const onSignInwithFacebook = () => {
-    console.warn("Sign in with facebook ");
-  };
-  const onSignInwithApple = () => {
-    console.warn("Sign in with Apple");
-  };
+
   const onSignUpPressed = () => {
     console.warn("Sign in with Apple");
   };
@@ -46,27 +39,7 @@ const SignInScreen = () => {
           text="Forget Password?"
           type="TERTIARY"
         />
-        <CustomButton
-          onPress={onSignInwithGoogle}
-          text="Sign In with Google"
-          type="PRIMARY"
-          bgColor="#FAE9EA"
-          fgColor="#DD4D44"
-        />
-        <CustomButton
-          onPress={onSignInwithFacebook}
-          text="Sign In with Facebook"
-          type="PRIMARY"
-          bgColor="#E7EAF4"
-          fgColor="#4765A9"
-        />
-        <CustomButton
-          onPress={onSignInwithApple}
-          text="Sign In with Apple"
-          type="PRIMARY"
-          bgColor="#e3e3e3"
-          fgColor="#363636"
-        />
+        <SocialSignInButton />
         <CustomButton
           onPress={onSignUpPressed}
           text="Don't have an account? create one."
